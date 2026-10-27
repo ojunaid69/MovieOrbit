@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MovieOrbit</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="MovieOrbit Platform Logo" />
+          </a>
+          <h1>MovieOrbit</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="movies.html" class="nav-link">Movies</a></li>
+            <li>
+              <a href="recommend.html" class="nav-link">Recommendations</a>
+            </li>
+            <li><a href="register.html" class="nav-link">Register</a></li>
+            <li>
+              <a href="booking.html" class="nav-link active">Book Tickets</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="booking-section">
+        <div class="booking-header">
+          <h2>Reserve Your Cinema Tickets</h2>
+          <p>
+            Complete the form below to lock in your seats and screening time.
+          </p>
+        </div>
+        <form
+          id="booking-form"
+          class="booking-form"
+          method="POST"
+          action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php"
+          novalidate
+        >
+          <fieldset class="form-group-container">
+            <legend>1.Contact Information</legend>
+
+            <div class="form-group">
+              <label for="fullname">Full Name:</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="e.g. John Doe"
+              />
+              <span
+                class="error-msg"
+                id="fullname-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+              />
+              <span
+                class="error-msg"
+                id="email-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="04123456789"
+              />
+              <span
+                class="error-msg"
+                id="phone-error"
+                aria-live="polite"
+              ></span>
+              <small class="field-hint">Must contain at least 11 digits</small>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group-container">
+            <legend>2.Session &amp; Ticket Selections</legend>
+
+            <div class="form-group">
+              <label for="movie-select">Select Movie:</label>
+              <select id="movie-select" name="movie">
+                <option value="">-- Choose a Movie --</option>
+                <option value="Interstellar" data-price="49.99">
+                  Interstellar (70MM IMAX) - $49.99
+                </option>
+                <option value="The Odyssey" data-price="49.99">
+                  The Odyssey (70MM IMAX) - $49.99
+                </option>
+                <option value="GOAT" data-price="25.00">GOAT - $25.00</option>
+                <option value="The Wild Robot" data-price="25.00">
+                  The Wild Robot - $25.00
+                </option>
+                <option value="The Dark Knight" data-price="49.99">
+                  The Dark Knight (70MM IMAX) - $49.99
+                </option>
+                <option value="Cars" data-price="25.00">Cars - $25.00</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="screening-datetime">Screening Date &amp; Time:</label>
+              <input
+                type="datetime-local"
+                id="screening-datetime"
+                name="screening_datetime"
+              />
+              <span
+                class="error-msg"
+                id="datetime-error"
+                aria-live="polite"
+              ></span>
+              <small class="field-hint"
+                >Screening session must not be scheduled in the past.</small
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="ticket-quantity">Number of Tickets:</label>
+              <input
+                type="number"
+                id="ticket-quantity"
+                name="ticket_quantity"
+                min="1"
+                value="1"
+              />
+              <span
+                class="error-msg"
+                id="quantity-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div class="form-group">
+              <label for="ticket-type">Ticket Concession Type:</label>
+              <select id="ticket-type" name="ticket-type">
+                <option value="Adult">Standard Adult (Full Price)</option>
+                <option value="Student">Student Concession (20% off)</option>
+                <option value="Child">Child (Under 12) (30% off)</option>
+              </select>
+            </div>
+
+            <div class="form-group cost-display-box">
+              <label for="booking-cost">Calculated Booking Total ($AUD):</label>
+              <input
+                type="text"
+                id="booking-cost"
+                name="booking_cost"
+                value="$0.00"
+                readonly
+              />
+            </div>
+          </fieldset>
+          <fieldset class="form-group-container">
+            <legend>3. Payment &amp; Confirmation</legend>
+
+            <div class="form-group">
+              <label>Payment Method:</label>
+              <div class="radio-group">
+                <label>
+                  <input
+                    type="radio"
+                    name="payment-method"
+                    value="voucher"
+                    id="pay-voucher"
+                  />Voucher Code
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="payment-method"
+                    value="online"
+                    id="pay-online"
+                  />Online Payment (Credit Card)
+                </label>
+              </div>
+              <span
+                class="error-msg"
+                id="payment-method-error"
+                aria-live="polite"
+              ></span>
+            </div>
+
+            <div
+              id="card-card-fields"
+              class="conditional-fields"
+              style="display: none"
+            >
+              <div class="form-group">
+                <label for="card-type">Card Provider:</label>
+                <select id="card-type" name="card-type">
+                  <option value="">-- Select Card Provider --</option>
+                  <option value="Visa">Visa (16 digits)</option>
+                  <option value="MasterCard">MasterCard (16 digits)</option>
+                  <option value="American Express">
+                    American Express (15 digits)
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="card-name">Name on Card:</label>
+                <input
+                  type="text"
+                  id="card-name"
+                  name="card-name"
+                  placeholder="Full name as printed on card"
+                />
+                <span
+                  class="error-msg"
+                  id="cardname-error"
+                  aria-live="polite"
+                ></span>
+              </div>
+              <div class="form-row">
+                <div class="form-group flex-1">
+                  <label for="card-expiry">Expiry Date (MM/YY):</label>
+                  <input
+                    type="text"
+                    id="card-expiry"
+                    name="card-expiry"
+                    placeholder="12/28"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="billing-email">Billing Email Address:</label>
+              <div class="checkbox-container">
+                <input type="checkbox" id="same-email" name="same_email" />
+                <label for="same-email" class="inline-label"
+                  >Same as contact email address</label
+                >
+              </div>
+              <input
+                type="email"
+                id="billing-email"
+                name="billing_email"
+                placeholder="billing@example.com"
+              />
+              <span
+                class="error-msg"
+                id="billing-email-error"
+                aria-live="polite"
+              ></span>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+              Confirm and Submit Booking
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2026 MovieOrbit Cinema Inc. All rights reserved.</p>
+        <p>COS10005 Web Development - Assignment 2</p>
+      </div>
+    </footer>
+  </body>
+</html>

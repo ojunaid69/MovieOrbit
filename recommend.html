@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MovieOrbit</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="MovieOrbit Platform Logo" />
+          </a>
+          <h1>MovieOrbit</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="movies.html" class="nav-link">Movies</a></li>
+            <li>
+              <a href="recommend.html" class="nav-link active"
+                >Recommendations</a
+              >
+            </li>
+            <li><a href="register.html" class="nav-link">Register</a></li>
+            <li><a href="booking.html" class="nav-link">Book Tickets</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="recommend-section">
+        <div class="recommend-header">
+          <h2>Find Your Perfect Movie Match</h2>
+          <p>
+            Not sure what to watch? Tell us your preferences, and we will find
+            the ideal film showing right now at MovieOrbit.
+          </p>
+        </div>
+
+        <form id="recommend-form" class="recommend-form">
+          <div class="form-group">
+            <label for="genre"> Preferred Genre: </label>
+            <select id="genre" name="genre" required>
+              <option value="">-- Select Genre --</option>
+              <option value="Sci-Fi">Sci-Fi &amp; Space</option>
+              <option value="Action">Action &amp; Crime</option>
+              <option value="Animation">Animation &amp; Kids</option>
+              <option value="Epic">Historical &amp; Epic</option>
+              <option value="Comedy">Comedy &amp; Sports</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="age-group">Age Group:</label>
+            <select id="age-group" name="age-group" required>
+              <option value="">-- Select Age Group --</option>
+              <option value="Child">Child (Under 12)</option>
+              <option value="Teen">Teen (13-17)</option>
+              <option value="Adult">Adult (18+)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="preference">Viewing Preference:</label>
+            <select id="preference" name="preference" required>
+              <option value="">-- Select Viewing Preference --</option>
+              <option value="Family">Family Outing</option>
+              <option value="Date Night">Date Night</option>
+              <option value="Friends">Out with Friends</option>
+              <option value="Solo">Solo Cinema Experience</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Find My Movie</button>
+        </form>
+        <div
+          id="recommendation-result"
+          class="recommendation-result"
+          aria-live="polite"
+        ></div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2026 MovieOrbit Cinema Inc. All rights reserved.</p>
+        <p>COS10005 Web Development - Assignment 2</p>
+      </div>
+    </footer>
+  </body>
+</html>

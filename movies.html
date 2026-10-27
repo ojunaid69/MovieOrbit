@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MovieOrbit</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="MovieOrbit Platform Logo" />
+          </a>
+          <h1>MovieOrbit</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="movies.html" class="nav-link active">Movies</a></li>
+            <li>
+              <a href="recommend.html" class="nav-link">Recommendations</a>
+            </li>
+            <li><a href="register.html" class="nav-link">Register</a></li>
+            <li><a href="booking.html" class="nav-link">Book Tickets</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="movies-catalogue">
+        <div class="catalogue-intro">
+          <h2>Currently screening at MovieOrbit</h2>
+          <p>
+            Explore our lineup of blockbusters, timeless modern classics, and
+            family adventures showing across standard and IMAX auditoriums.
+          </p>
+        </div>
+
+        <div class="movie-grid">
+          <!-- Movie 1:Interstellar-->
+          <article class="movie-card">
+            <img
+              src="images/interstellar.jpg"
+              alt="Scene from the movie Interstellar showing the planet Saturn illuminated by a bright sun flare, with a curved shadow cast across its rings"
+            />
+            <div class="movie-details">
+              <h3>Interstellar</h3>
+              <p class="movie-meta"><strong>Genre:</strong>Sci-Fi /Adventure</p>
+              <p class="movie-meta">
+                <strong>Rating:</strong>M (Mature themes and coarse language)
+              </p>
+              <p class="movie-meta"><strong>Running Time:</strong>169 mins</p>
+              <p class="movie-meta">
+                <strong>Price:</strong> $49.99 (70mm IMAX Experience)
+              </p>
+              <p class="movie-meta">
+                <strong>Sessions</strong>1:00PM, 5:30PM, 9:00PM
+              </p>
+
+              <p class="movie-description">
+                As humanity faces extinction from devastating global blight and
+                catastrophic dust storms on Earth, a dedicated team of brave
+                astronauts embarks on humanity's most crucial journey. Traveling
+                across space and through a newly discovered wormhole near
+                Saturn, they must locate a viable habitable planet across
+                uncharted galaxies before time runs out for everyone remaining
+                on their dying home world.
+              </p>
+              <a href="booking.html?movie=Interstellar" class="btn btn-primary"
+                >Book Interstellar</a
+              >
+            </div>
+          </article>
+
+          <!-- Movie 2: The Odyssey -->
+          <article class="movie-card">
+            <img
+              src="images/theodyssey.jpg"
+              alt="Movie poster for Christopher Nolan's The Odyssey, depicting the back of a warrior's head wearing a dark crested ancient Greek helmet secured with a gold, spine-like ornament, set against a misty, blue-toned battlefield."
+            />
+            <div class="movie-details">
+              <h3>The Odyssey</h3>
+              <p class="movie-meta">
+                <strong>Genre:</strong> Historical /Epic Action
+              </p>
+              <p class="movie-meta">
+                <strong>Rating:</strong> M (Violence and epic battle themes)
+              </p>
+              <p class="movie-meta"><strong>Running Time:</strong> 172 mins</p>
+              <p class="movie-meta"><strong>Price:</strong>$49.99</p>
+              <p class="movie-meta">
+                <strong>Sessions</strong>11:30PM, 3:45PM, 8:15PM
+              </p>
+              <p class="movie-description">
+                Following the brutal fall of ancient Troy, the legendary King
+                Odysseus sets sail across treacherous seas on a perilous
+                ten-year journey home to Ithaca. Along his challenging voyage,
+                he must outsmart terrifying mythical monsters, confront wrathful
+                Olympian gods, and endure supernatural temptations in a
+                relentless struggle to reclaim his throne and reunite with his
+                loyal family.
+              </p>
+              <a href="booking.html?movie=The+Odyssey" class="btn btn-primary"
+                >Book The Odyssey</a
+              >
+            </div>
+          </article>
+          <!-- Movie 3:GOAT -->
+          <article class="movie-card">
+            <img
+              src="images/goat.jpg"
+              alt="Animated goat basketball player Will executes a crossover dribble, making a tall horse defender stumble backward on an outdoor court."
+            />
+            <div class="movie-details">
+              <h3>GOAT</h3>
+              <p class="movie-meta">
+                <strong>Genre:</strong> Animation / Sports
+              </p>
+              <p class="movie-meta">
+                <strong>Rating:</strong>PG (Mild sporting violence and humorous
+                mischief)
+              </p>
+              <p class="movie-meta"><strong>Running Time:</strong>100 mins</p>
+              <p class="movie-meta"><strong>Price:</strong>$25.00</p>
+              <p class="movie-meta">
+                <strong>Sessions:</strong>10:00AM, 12:45PM, 3:30PM
+              </p>
+              <p class="movie-description">
+                In a vibrant animal metropolis, an underdog young goat dreams of
+                competing in the elite professional sports league alongside
+                massive opponents. Facing skepticism from veteran champions and
+                commentators alike, our determined hero assembles an
+                unconventional training crew. Through perseverance, humor, and
+                heart, he proves to everyone that true greatness comes from
+                dedication rather than sheer physical size.
+              </p>
+              <a href="booking.html?movie=GOAT" class="btn btn-primary"
+                >Book GOAT</a
+              >
+            </div>
+          </article>
+          <!-- Movie 4: The Wild Robot -->
+          <article class="movie-card">
+            <img
+              src="images/thewildrobot.jpg"
+              alt="A white robot with glowing blue eyes peeks out from behind dark green pine branches at night."
+            />
+            <div class="movie-details">
+              <h3>The Wild Robot</h3>
+              <p class="movie-meta">
+                <strong>Genre:</strong> animated science fiction and family
+                adventure
+              </p>
+              <p class="movie-meta">
+                <strong>Rating:</strong>PG ( Mild animated violence (including
+                robotic lasers, explosions, and slapstick hits) and very mild
+                language)
+              </p>
+              <p class="movie-meta"><strong>Running Time:</strong>102 mins</p>
+              <p class="movie-meta"><strong>Price:</strong>$25.00</p>
+              <p class="movie-meta">
+                <strong>Sessions:</strong>10:00AM, 12:45PM, 3:30PM
+              </p>
+              <p class="movie-description">
+                After a shipwreck strands an intelligent helper robot named Roz
+                on an uninhabited wilderness island, she must adapt to the
+                unforgiving natural terrain. Roz gradually builds trust with the
+                suspicious forest wildlife and accidentally adopts an orphaned
+                baby gosling. Together, they create an extraordinary
+                cross-species family while defending their peaceful sanctuary
+                against external technological threats.
+              </p>
+              <a
+                href="booking.html?movie=The+Wild+Robot"
+                class="btn btn-primary"
+                >Book The Wild Robot</a
+              >
+            </div>
+          </article>
+          <!-- Movie 5: The Dark Knight -->
+          <article class="movie-card">
+            <img
+              src="images/thedarkknight.jpg"
+              alt="A caped figure stands in front of tall glass windows, looking out at a city glowing with blue and green lights at night."
+            />
+            <div class="movie-details">
+              <h3>The Dark Knight</h3>
+              <p class="movie-meta">
+                <strong>Genre:</strong> Action / Crime Drama
+              </p>
+              <p class="movie-meta">
+                <strong>Rating:</strong> M (Moderate violence and intense dark
+                themes)
+              </p>
+              <p class="movie-meta"><strong>Running Time:</strong> 152 mins</p>
+              <p class="movie-meta">
+                <strong>Price:</strong> $49.99 (70mm Presentation)
+              </p>
+              <p class="movie-meta">
+                <strong>Sessions:</strong> 2:00 PM, 6:00 PM, 9:30 PM
+              </p>
+              <!-- Word count: 68 words -->
+              <p class="movie-description">
+                With the assistance of Lieutenant Jim Gordon and determined
+                prosecutor Harvey Dent, Batman continues dismantling organized
+                crime syndicates across Gotham City. However, their unified
+                efforts are thrown into total chaos when a sadistic criminal
+                mastermind calling himself the Joker emerges. The enigmatic
+                villain unleashes widespread anarchy, testing Batman's
+                psychological limits and moral boundaries to their absolute
+                breaking point.
+              </p>
+              <a
+                href="booking.html?movie=The+Dark+Knight"
+                class="btn btn-primary"
+                >Book The Dark Knight</a
+              >
+            </div>
+          </article>
+          <!-- Movie 6: Cars -->
+          <article class="movie-card">
+            <img
+              src="images/cars.jpg"
+              alt="A red race car with a big smile speeds past a checkered floor, while other cartoon cars watch from a desert town at sunset"
+            />
+            <div class="movie-details">
+              <h3>Cars</h3>
+              <p class="movie-meta">
+                <strong>Genre:</strong> Animation / Family Comedy
+              </p>
+              <p class="movie-meta">
+                <strong>Rating:</strong> G (General audience, suitable for all
+                ages)
+              </p>
+              <p class="movie-meta"><strong>Running Time:</strong> 117 mins</p>
+              <p class="movie-meta"><strong>Price:</strong> $25.00</p>
+              <p class="movie-meta">
+                <strong>Sessions:</strong> 9:45 AM, 12:15 PM, 2:45 PM
+              </p>
+              <!-- Word count: 66 words -->
+              <p class="movie-description">
+                Arrogant hotshot rookie race car Lightning McQueen accidentally
+                damages the main street of forgotten desert town Radiator
+                Springs while traveling to his championship race. Sentenced to
+                community service repairing the roadway, McQueen befriends an
+                eccentric assortment of quirky local vehicles. Through their
+                humble wisdom, he learns that true glory is defined by genuine
+                friendship rather than victory trophies.
+              </p>
+              <a href="booking.html?movie=Cars" class="btn btn-primary"
+                >Book Cars</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2026 MovieOrbit Cinema Inc. All rights reserved.</p>
+        <p>COS10005 Web Development - Assignment 2</p>
+      </div>
+    </footer>
+  </body>
+</html>
